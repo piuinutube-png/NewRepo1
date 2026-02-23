@@ -1,0 +1,6 @@
+{
+    "url": "http://localhost:8888/index.php?module=Users&action=Logout",
+    "un": "admin",
+    "pwd": "password",
+    "title1": "Ticket1"
+}

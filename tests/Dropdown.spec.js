@@ -32,7 +32,7 @@ test("customdrop", async ({ page }) => {
     console.log(drop); //Price: Low to High
 })
 /////////////////////custom select with option////////////////////////////////////
-test.only("customdrop2", async ({ page }) => {
+test("customdrop2", async ({ page }) => {
      await page.goto("https://www.amazon.in/", { waitUntil: "load" })
     await page.locator("#twotabsearchtextbox").fill("shoes")
     await page.locator("//div[@class='two-pane-results-container']").first().waitFor()

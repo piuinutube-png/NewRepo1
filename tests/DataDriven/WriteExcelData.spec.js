@@ -19,7 +19,7 @@ test("write data in excel", async ({ page }) => {
     book.xlsx.writeFile("C:/Users/piuin/OneDrive/Desktop/VsExcelData/WriteExceldata1.xlsx")
 })
 //////////////////////write data in excel from app///////////////////////////
-test.only("write data in excel from app", async ({ page }) => {
+test("write data in excel from app", async ({ page }) => {
     var book = new excel.Workbook()
     await book.xlsx.readFile("C:/Users/piuin/OneDrive/Desktop/VsExcelData/WriteExceldata1.xlsx")
     var sheet = book.getWorksheet("Sheet3")

@@ -12,7 +12,7 @@ test("defaultnotify", async ({ browser }) => {
     console.log((result)); //denied
 })
 ///////////////Notifications by userinteraction/////////////////////////
-test.only("usernotify", async ({ browser }) => {
+test("usernotify", async ({ browser }) => {
     var context = await browser.newContext({ permissions: ["notifications"] }) //if microphone,camera...not here and we are writing then it will be denied
     var page = await context.newPage()
     await page.goto("https://demoapps.qspiders.com/ui/browserNot?sublist=0")

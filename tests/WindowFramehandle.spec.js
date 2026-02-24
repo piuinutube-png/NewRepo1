@@ -27,7 +27,7 @@ test("onetabtoanother1", async ({ browser }) => {
     await page2.locator("//span[text()='Account']").click()   //pass
 })
 ////////////////one window to another with handling///////////
-test.only("onewindowtoanother", async ({ browser }) => {
+test("onewindowtoanother", async ({ browser }) => {
     var context = await browser.newContext()
     var page1 = await context.newPage()
     await page1.goto("https://demoapps.qspiders.com/ui/browser/multipleWindow?sublist=2")

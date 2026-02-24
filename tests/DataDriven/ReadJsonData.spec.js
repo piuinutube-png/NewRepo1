@@ -104,7 +104,7 @@ test("readdffmultiplejsonset2", async ({ page }) => {
     }
 })
 //////////////////////read  single set data with describe///////////////////
-test.describe.only("readsinglejsonsetDescribe",  () => {
+test.describe("readsinglejsonsetDescribe",  () => {
     var jsonfile1 = fs.readFileSync("C:/Users/piuin/OneDrive/Desktop/TekPyramid/PW1/tests/TestData/JsonSingleSetData.json")
     var jsondata1 = JSON.parse(jsonfile1)
     var url = jsondata1.url

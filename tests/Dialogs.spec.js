@@ -1,6 +1,5 @@
 /////////////default dismiss dialogs///////////////////////
 import { test, expect } from "@playwright/test"
-import { text } from "node:stream/consumers"
 test("defcandialog", async ({ page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/")
     await page.locator("//button[text()='Simple Alert']").click()
@@ -39,7 +38,7 @@ test("pageon", async ({ page }) => {
     //await expect(page.locator("#demo")).toHaveText(`Hello ${text1}! How are you today?`) //pass for accept(assertion)
 })
 /////////////////accept or dismiss dialog using script(page.once)//////////////////////
-test.only("pageonce", async ({ page }) => {
+test("pageonce", async ({ page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/")
     page.once("dialog", async (dialog) => {
         if (dialog.type() == "alert") {

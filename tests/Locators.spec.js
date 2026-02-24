@@ -7,7 +7,7 @@ test("locators", async ({ page }) => {
     await page.locator("[class='btn']").click
 })
 
-test.only("locators1", async ({ page }) => {
+test("locators1", async ({ page }) => {
     await page.goto("https://practicetestautomation.com/practice-test-login/")
     await page.locator("//input[@name='username']").fill("student")
     await page.locator("//input[@name='password']").fill("Password123")

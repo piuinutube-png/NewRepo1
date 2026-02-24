@@ -18,7 +18,7 @@ test("skipanno3", async ({ browserName }) => {
     console.log("test3");
 })
 //////////////////////////////////////////////////////////////////
-test.only("onlyanno4", async () => {
+test("onlyanno4", async () => {
     console.log("test4");                //only this will execute
 })
 ///////////////////////////////////////////////////////////////////

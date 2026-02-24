@@ -25,7 +25,7 @@ test("read multiple data from excel", async ({ page }) => {
   }
 })
 //////////////////sending multiple data from excel//////////////////////
-test.only("send multiple data from excel", async ({ page }) => {
+test("send multiple data from excel", async ({ page }) => {
   var book = new excel.Workbook()
   await book.xlsx.readFile("C:/Users/piuin/OneDrive/Desktop/VsExcelData/ReadExceldata1.xlsx")
   var sheet = book.getWorksheet("Sheet1")

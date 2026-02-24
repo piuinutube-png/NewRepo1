@@ -52,7 +52,7 @@ test("bcontrols7", async ({ page }) => {
     await page.screenshot({ path: `screenshot / ss${time}.png` })
 })
 //////////////////////////////////////////////////////////////////
-test.only("bcontrols8", async () => {
+test("bcontrols8", async () => {
     var browser2 = await firefox.launch() //firefox should be there in import
     var context2 = await browser2.newContext()
     var page2 = await context2.newPage()

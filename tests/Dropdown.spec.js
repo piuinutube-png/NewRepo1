@@ -1,7 +1,7 @@
 
 import { test, expect } from "@playwright/test"
 /////////////////////single drop/////////////////////////////////////////////////
-test("singledrop", async ({ page }) => {
+test("singledrop", {tag:"@smoke"}, async ({ page }) => {
     await page.goto("https://demoapps.qspiders.com/ui/dropdown?sublist=0")
     await page.locator("select[id='select3']").selectOption({ value: "India" }) //india
     await page.waitForTimeout(2000)
@@ -13,7 +13,7 @@ test("singledrop", async ({ page }) => {
     await page.waitForTimeout(2000)
 })
 ///////////////////////////multi select///////////////////////////////
-test("multidrop", async ({ page }) => {
+test("multidrop @smoke", async ({ page }) => {
     await page.goto("https://demoapps.qspiders.com/ui/dropdown/multiSelect?sublist=1")
     await page.locator("select[id='select-multiple-native']").selectOption([{ value: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops", value: "Mens Cotton Jacket" }]) //both
     await page.waitForTimeout(2000)
@@ -32,7 +32,7 @@ test("customdrop", async ({ page }) => {
     console.log(drop); //Price: Low to High
 })
 /////////////////////custom select with option////////////////////////////////////
-test("customdrop2", async ({ page }) => {
+test("customdrop2",async ({ page }) => {
      await page.goto("https://www.amazon.in/", { waitUntil: "load" })
     await page.locator("#twotabsearchtextbox").fill("shoes")
     await page.locator("//div[@class='two-pane-results-container']").first().waitFor()
@@ -45,7 +45,7 @@ test("customdrop2", async ({ page }) => {
     console.log(drop); //Price: High to Low
 })
 /////////////////////custom select with all and textcontent////////////////////////////////////
-test("customdrop3", async ({ page }) => {
+test("customdrop3",{tag:['@smoke','@regression'],} , async ({ page }) => {
     await page.goto("https://demoapps.qspiders.com/ui/dropdown?sublist=0", { waitUntil: "load" })
     await page.waitForTimeout(2000)
     await page.locator("//select[@id='select3']").first().waitFor()
